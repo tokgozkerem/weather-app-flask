@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename= 'css/style.css') }}"
+    />
+    <title>Weather Application</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-info-container">
+        {% if weather_data %}
+        <div class="weather-info">
+          <h2>Weather Information</h2>
+          <p>City: {{ weather_data['name'] }}</p>
+          <p>Temperature: {{ weather_data['main']['temp'] }}°C</p>
+          <p>Humidity: {{ weather_data['main']['humidity'] }}</p>
+          <!-- Diğer hava durumu bilgilerini buraya ekleyebilirsiniz -->
+          {% if 'weather' in weather_data %} {% for weather in
+          weather_data['weather'] %}
+          <p>Weather: {{ weather['main'] }}</p>
+          {% endfor %} {% endif %}
+        </div>
+        {% endif %}
+      </div>
+      <form method="POST" class="search-form">
+        <div class="search-container">
+          <label for="city" class="city-label">City:</label>
+          <input type="text" id="city" name="city" class="search-input" />
+          <button type="submit" class="submit-button">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

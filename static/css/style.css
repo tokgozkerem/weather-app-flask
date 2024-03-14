@@ -1,0 +1,59 @@
+body {
+  background-color: #769fcd;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* İçeriklerin dikey hizalanması için */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.weather-info-container {
+  margin-bottom: 20px; /* Arama formunun üstüne bir boşluk bırakmak için */
+}
+
+.weather-info {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px; /* Hava durumu bilgileri arasında bir boşluk bırakmak için */
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.city-label {
+  margin-right: 10px;
+  font-weight: bold;
+  color: #f7fbfc; /* City: yazısının rengi */
+}
+
+.search-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f7fbfc; /* Input formunun iç rengi */
+}
+
+.submit-button {
+  background-color: #b9d7ea;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.submit-button:hover {
+  background-color: #d6e6f2;
+}
